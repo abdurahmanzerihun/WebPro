@@ -22,6 +22,11 @@ h2 {
   color: var(--primary-color);
 }
 
+p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+}
+
 .location,
 .phone,
 .email {
@@ -42,13 +47,81 @@ h2 {
   transform: scale(1.05);
 }
 
-@media(max-width:600px) {
+.contact-us {
+  border: 1px solid var(--primary-highlight);
+  margin-top: 50px;
+  display: flex;
+  align-items: flex-start;
+  max-width: 900px;
+  gap: 30px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
 
+.contact-note {
+  text-align: center;
+}
+
+.contact-us-form {
+  border-left: 1px solid #aaa;
+  padding-left: 30px;
+}
+
+.contact-us-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-us-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.contact-us-form input[type="text"],
+.contact-us-form input[type="email"],
+.contact-us-form input[type="number"],
+.contact-us-form textarea {
+  padding: 12px 15px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-us-form input[type="text"]::placeholder,
+.contact-us-form input[type="email"]::placeholder,
+.contact-us-form input[type="number"]::placeholder,
+.contact-us-form textarea::placeholder {
+  color: #aaa;
+}
+
+.submit-btn {
+  padding: 10px 12px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  cursor: pointer;
+  background-color: var(--primary-highlight);
+}
+
+@media(max-width:600px) {
   .contact-info {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-
   }
 
   .location,
@@ -58,4 +131,22 @@ h2 {
     width: 100%;
     text-align: center;
   }
+
+  .contact-us {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-note,
+  .contact-us-form {
+    border: none;
+    max-width: 300px;
+  }
+
+  .contact-note {
+    border-bottom: 1px solid #aaa;
+  }
+
+  .contact-us-form {}
+
 }
