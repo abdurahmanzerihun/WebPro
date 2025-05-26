@@ -13,9 +13,14 @@
   gap: 30px;
 }
 
-.location h2 a {
+.map-link {
   text-decoration: none;
   color: var(--primary-color);
+}
+
+.map-link:hover {
+  cursor: pointer;
+  color: var(--primary-highlight);
 }
 
 h2 {
@@ -45,6 +50,7 @@ p {
 .phone:hover,
 .email:hover {
   transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 181, 237, 0.2);
 }
 
 .contact-us {
@@ -103,6 +109,11 @@ p {
   color: #aaa;
 }
 
+
+.contact-us-form textarea {
+  height: 100px;
+}
+
 .submit-btn {
   padding: 10px 12px;
   background-color: var(--primary-color);
@@ -138,6 +149,12 @@ p {
     text-align: center;
   }
 
+  .location:hover,
+  .phone:hover,
+  .email:hover {
+    box-shadow: none;
+  }
+
   .contact-us {
     flex-direction: column;
     align-items: center;
@@ -149,10 +166,19 @@ p {
     max-width: 300px;
   }
 
+
+
   .contact-note {
     border-bottom: 1px solid #aaa;
   }
 
-  .contact-us-form {}
+  .contact-us-form {
+    padding-left: 0px;
+    padding-right: 40px;
+  }
+
+  #map {
+    height: 400px;
+  }
 
 }
