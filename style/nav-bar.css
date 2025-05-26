@@ -35,36 +35,37 @@
 }
 
 @media (max-width: 600px) {
+  .nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo {
+    height: 50px;
+  }
 
   .menu-toggle {
     display: block;
-    margin-left: auto;
-    margin-top: auto;
     color: #fff;
   }
 
   .nav-bar {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
   }
 
   #nav-links {
     display: none;
-  }
-
-  #nav-links.show {
-    display: flex;
-  }
-
-  .nav-bar ul {
     flex-direction: column;
     width: 100%;
     gap: 10px;
     padding-top: 10px;
   }
 
-  .nav-bar ul li {
-    width: 100%;
+  #nav-links.show {
+    display: flex;
   }
 
   .nav-bar ul li a {
