@@ -117,7 +117,7 @@ p {
   background-color: var(--primary-highlight);
 }
 
-iframe {
+#map {
   width: 100%;
   height: 600px;
   margin-top: 30px;
