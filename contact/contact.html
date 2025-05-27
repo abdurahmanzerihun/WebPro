@@ -1,102 +1,88 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="../favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>NovaDev | Contact Us</title>
-    <link href="../style/nav-bar.css" rel="stylesheet" />
-    <link href="./style/style.css" rel="stylesheet" />
-  </head>
 
-  <body>
-    <!-- Navbar-->
-    <div class="nav-bar">
-      <div class="nav-header">
-        <img src="../img/logo.png" class="logo" alt="logo" />
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-      </div>
-      <ul id="nav-links">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../about/about.html">About</a></li>
-        <li><a href="../services/services.html">Services</a></li>
-        <li><a href="">Contact</a></li>
-        <li><a href="../team/team.html">Team</a></li>
-      </ul>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="../favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NovaDev | Contact Us</title>
+  <link href="../style/nav-bar.css" rel="stylesheet" />
+  <link href="./style/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Navbar-->
+  <div class="nav-bar">
+    <div class="nav-header">
+      <img src="../img/logo.png" class="logo" alt="logo" />
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+    <ul id="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about/about.html">About</a></li>
+      <li><a href="../services/services.html">Services</a></li>
+      <li><a href="">Contact</a></li>
+      <li><a href="../team/team.html">Team</a></li>
+    </ul>
+  </div>
+
+  <!--Contact Info-->
+  <div class="contact-info">
+    <div class="location">
+      <h2><a href="#map" class="map-link">Location</a></h2>
+      <p>Hawassa, Ethiopia</p>
+      <p>Hawassa, Ethiopia</p>
+      <p>Hawassa, Ethiopia</p>
     </div>
 
-    <!--Contact Info-->
-    <div class="contact-info">
-      <div class="location">
-        <h2><a href="#map" class="map-link">Location</a></h2>
-        <p>Hawassa, Ethiopia</p>
-        <p>Hawassa, Ethiopia</p>
-        <p>Hawassa, Ethiopia</p>
-      </div>
-
-      <div class="phone">
-        <h2>Phone</h2>
-        <p>+251912121212</p>
-        <p>+251912121212</p>
-        <p>+251912121212</p>
-      </div>
-
-      <div class="email">
-        <h2>Email</h2>
-        <p>example@gmail.com</p>
-        <p>example@gmail.com</p>
-        <p>example@gmail.com</p>
-      </div>
+    <div class="phone">
+      <h2>Phone</h2>
+      <p>+251912121212</p>
+      <p>+251912121212</p>
+      <p>+251912121212</p>
     </div>
 
-    <!--Contact Form-->
-    <div class="contact-us">
-      <div class="contact-note">
-        <h2>Get In Touch Now</h2>
-        <p>Fill out the form and we'll get back to you as soon as possible.</p>
-      </div>
-      <div class="contact-us-form">
-        <form>
-          <label>Full Name:</label>
-          <input
-            type="text"
-            id="full_name"
-            placeholder="Full Name (eg. John Doe)"
-            required
-          />
-          <label>Email:</label>
-          <input type="email" id="email" placeholder="Email" required />
-          <label>Phone-Number:</label>
-          <input
-            type="number"
-            name="phone_number"
-            placeholder="Phone Number"
-            required
-          />
-
-          <label>Message:</label>
-          <textarea
-            id="message"
-            placeholder="Write a message..."
-            required
-          ></textarea>
-
-          <button class="submit-btn" onclick="submitForm(event)">Send</button>
-        </form>
-      </div>
+    <div class="email">
+      <h2>Email</h2>
+      <p>example@gmail.com</p>
+      <p>example@gmail.com</p>
+      <p>example@gmail.com</p>
     </div>
+  </div>
 
-    <!--Map-->
-    <iframe
-      id="map"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63354.66705487333!2d38.5155072!3d7.048396799999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x17b14538fa72ae17%3A0xe14fc21f816ad591!2sInfolink%20University%20College!5e0!3m2!1sen!2set!4v1748256446555!5m2!1sen!2set"
-      style="border: 0"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
+  <!--Contact Form-->
+  <div class="contact-us">
+    <div class="contact-note">
+      <h2>Get In Touch Now</h2>
+      <p>Fill out the form and we'll get back to you as soon as possible.</p>
+    </div>
+    <div class="contact-us-form">
+      <form>
+        <label>Full Name:</label>
+        <input type="text" id="full_name" placeholder="Full Name (eg. John Doe)" required />
 
-    <script src="../script/nav-bar.js"></script>
-    <script src="./js/contact.js"></script>
-  </body>
+        <label>Email:</label>
+        <input type="email" id="email" placeholder="Email" required />
+
+        <label>Phone-Number:</label>
+        <input type="tel" name="phone_number" placeholder="Phone Number" pattern="^(\+\d{12}|0\d{9})$"
+          title="Invalid phone number" required />
+
+        <label>Message:</label>
+        <textarea id="message" placeholder="Write a message..." required></textarea>
+
+        <button class="submit-btn" onclick="submitForm(event)">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <!--Map-->
+  <iframe id="map"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63354.66705487333!2d38.5155072!3d7.048396799999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x17b14538fa72ae17%3A0xe14fc21f816ad591!2sInfolink%20University%20College!5e0!3m2!1sen!2set!4v1748256446555!5m2!1sen!2set"
+    style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  <script src="../script/nav-bar.js"></script>
+  <script src="./js/contact.js"></script>
+</body>
+
 </html>

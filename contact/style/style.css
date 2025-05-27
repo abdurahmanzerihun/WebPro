@@ -91,6 +91,7 @@ p {
 }
 
 .contact-us-form input[type="text"],
+.contact-us-form input[type="tel"],
 .contact-us-form input[type="email"],
 .contact-us-form input[type="number"],
 .contact-us-form textarea {
@@ -103,6 +104,7 @@ p {
 }
 
 .contact-us-form input[type="text"]::placeholder,
+.contact-us-form input[type="tel"]::placeholder,
 .contact-us-form input[type="email"]::placeholder,
 .contact-us-form input[type="number"]::placeholder,
 .contact-us-form textarea::placeholder {

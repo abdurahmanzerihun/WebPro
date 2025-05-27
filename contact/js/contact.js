@@ -7,9 +7,9 @@ splitName = (fullName) => {
 };
 
 submitForm = (event) => {
-  event.preventDefault();
+  // event.preventDefault();
 
-  const fullNameInput = document.getElementById("full-name").value;
+  const fullNameInput = document.getElementById("full_name").value;
   const { firstName, lastName } = splitName(fullNameInput);
   const phoneNumberInput = document.getElementById("phone_number").value;
   const emailInput = document.getElementById("email").value;
