@@ -6,31 +6,45 @@ splitName = (fullName) => {
   return { firstName, lastName };
 };
 
-submitForm = (event) => {
-  // event.preventDefault();
+submitForm = async (event) => {
+  event.preventDefault();
 
-  const fullNameInput = document.getElementById("full_name").value;
-  const { firstName, lastName } = splitName(fullNameInput);
-  const phoneNumberInput = document.getElementById("phone_number").value;
-  const emailInput = document.getElementById("email").value;
-  const messageInput = document.getElementById("message").value;
+  const fullName = document.getElementById("full_name").value;
+  const { firstName, lastName } = splitName(fullName);
+  const phoneNumber = document.getElementById("phone_number").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
 
-  const formData = new FormData();
-  formData.append("first_name", firstName);
-  formData.append("last_name", lastName);
-  formData.append("phone_number", phoneNumberInput);
-  formData.append("email", emailInput);
-  formData.append("message", messageInput);
+  const messageDetails = {
+    first_name: firstName,
+    last_name: lastName,
+    phone_number: phoneNumber,
+    email: email,
+    message: message,
+  };
 
-  fetch("", {
-    method: "POST",
-    body: formData,
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log("Server response", data);
-    })
-    .catch((error) => {
-      console.error("Error:", error);
+  try {
+    const response = await fetch("../php/message.php", {
+      method: "POST",
+      body: JSON.stringify(messageDetails),
+      headers: {
+        "Content-Type": "application/json",
+      },
     });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    if (data.success) {
+      alert("Message sent!");
+    } else {
+      alert("Error: " + data.message);
+    }
+  } catch (error) {
+    console.error("Fetch error:", error);
+    alert("Failed to send message. Check console.");
+  }
 };
