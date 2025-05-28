@@ -39,12 +39,17 @@ submitForm = async (event) => {
     const data = await response.json();
 
     if (data.success) {
-      alert("Message sent!");
+      document.getElementById("suc-msg").innerHTML =
+        "Message sent! We will contact you shortly.";
+      document.getElementById("suc-msg").style = "display: block";
     } else {
-      alert("Error: " + data.message);
+      document.getElementById("err-msg").innerHTML =
+        "Somthing went wrong, Try again!";
+      document.getElementById("err-msg").style = "display: block";
+
+      console.error("Error: " + data.message);
     }
   } catch (error) {
     console.error("Fetch error:", error);
-    alert("Failed to send message. Check console.");
   }
 };
