@@ -57,8 +57,8 @@
       <p>Fill out the form and we'll get back to you as soon as possible.</p>
     </div>
     <div class="contact-us-form">
-      <div id="err-msg"></div>
-      <div id="suc-msg"></div>
+      <div id="err-msg" style="display: none"></div>
+      <div id="suc-msg" style="display: none"></div>
       <form>
         <label>Full Name:</label>
         <input type="text" id="full_name" placeholder="Full Name (eg. John Doe)" required />
@@ -73,7 +73,9 @@
         <label>Message:</label>
         <textarea id="message" placeholder="Write a message..." required></textarea>
 
-        <button class="submit-btn" onclick="submitForm(event)">Send</button>
+        <button class="submit-btn" type="button" onclick="submitForm()">
+          Send
+        </button>
       </form>
     </div>
   </div>

@@ -6,9 +6,7 @@ splitName = (fullName) => {
   return { firstName, lastName };
 };
 
-submitForm = async (event) => {
-  event.preventDefault();
-
+submitForm = async () => {
   const fullName = document.getElementById("full_name").value;
   const { firstName, lastName } = splitName(fullName);
   const phoneNumber = document.getElementById("phone_number").value;
@@ -39,13 +37,18 @@ submitForm = async (event) => {
     const data = await response.json();
 
     if (data.success) {
-      document.getElementById("suc-msg").innerHTML =
-        "Message sent! We will contact you shortly.";
-      document.getElementById("suc-msg").style = "display: block";
+      const suc_msg = document.getElementById("suc-msg");
+      suc_msg.innerHTML = "Message sent! We will contact you shortly.";
+      suc_msg.style.display = "block";
+
+      document.getElementById("full_name").value = "";
+      document.getElementById("phone_number").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
     } else {
-      document.getElementById("err-msg").innerHTML =
-        "Somthing went wrong, Try again!";
-      document.getElementById("err-msg").style = "display: block";
+      const err_msg = document.getElementById("err-msg");
+      err_msg.innerHTML = "Somthing went wrong, Try again!";
+      err_msg.style.display = "block";
 
       console.error("Error: " + data.message);
     }
