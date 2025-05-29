@@ -3,6 +3,12 @@
   --primary-highlight: #00b5ed;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .nav-bar {
   display: flex;
   align-items: center;
