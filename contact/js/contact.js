@@ -56,3 +56,18 @@ submitForm = async () => {
     console.error("Fetch error:", error);
   }
 };
+
+showMap = (mapId, event) => {
+  document.querySelectorAll(".map").forEach((map) => {
+    map.style.display = "none";
+  });
+
+  document.getElementById(mapId).style.display = "block";
+
+  document.querySelectorAll(".map-show-links button").forEach((btn) => {
+    btn.classList.remove("active");
+  });
+
+  // document.getElementById(mapId).style.color = "#00b5ed";
+  event.target.classList.add("active");
+};

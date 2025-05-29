@@ -150,10 +150,41 @@ p {
   background-color: var(--primary-highlight);
 }
 
-#map {
+.map-show-links {
+  margin-top: 30px;
+  display: flex;
+}
+
+.map-show-links button {
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.map-show-links button:hover {
+  background-color: #e0e0e0;
+}
+
+
+.map-show-links button.active {
+  background-color: #e0e0e0;
+  border: 1px solid var(--primary-highlight);
+  border-radius: 2px;
+  border-bottom: none;
+  color: var(--primary-highlight);
+}
+
+#map1 {
+  display: block;
+}
+
+.map {
   width: 100%;
   height: 450px;
-  margin-top: 30px;
+  display: none;
 }
 
 @media(max-width:600px) {
@@ -199,7 +230,7 @@ p {
     width: 95%;
   }
 
-  #map {
+  .map {
     height: 400px;
   }
 
