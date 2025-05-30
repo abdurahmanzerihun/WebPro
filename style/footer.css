@@ -17,12 +17,47 @@ footer {
   gap: 20px;
 }
 
+
+.footer-img {
+  height: 50px;
+}
+
 .footer-item {
-  background-color: #444;
   padding: 20px;
   border-radius: 5px;
   width: 30%;
   text-align: center;
+  color: white;
+}
+
+.footer-item h3 {
+  color: var(--primary-highlight);
+  margin-bottom: 10px;
+}
+
+.footer-item ul {
+  list-style: none;
+}
+
+.footer-item ul li {
+  margin-bottom: 10px;
+}
+
+.footer-item ul li a {
+  color: whitesmoke;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+
+.footer-item ul li a:hover {
+  color: var(--primary-highlight);
+  cursor: pointer;
+}
+
+
+.copyright {
+  color: white;
 }
 
 @media(max-width: 600px) {
