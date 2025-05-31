@@ -15,8 +15,14 @@ footer {
   display: flex;
   justify-content: space-around;
   gap: 20px;
+  align-items: center;
 }
 
+.footer-item p {
+  margin-top: 10px;
+  max-width: 100%;
+  text-align: justify;
+}
 
 .footer-img {
   height: 50px;
@@ -25,7 +31,7 @@ footer {
 .footer-item {
   padding: 20px;
   border-radius: 5px;
-  width: 30%;
+  width: 100%;
   text-align: center;
   color: white;
 }
@@ -64,8 +70,8 @@ footer {
   .footer-container {
     flex-direction: column;
     align-items: center;
+    gap: 5px;
   }
-
 
   .footer-item {
     width: 80%;
