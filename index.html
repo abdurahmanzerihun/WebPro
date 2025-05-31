@@ -7,13 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NovaDev</title>
   <link href="style/nav-bar.css" rel="stylesheet" />
+  <link href="style/footer.css" rel="stylesheet" />
 </head>
 
 <body>
   <div class="nav-bar">
-    <img src="./img/logo.png" />
-
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="nav-header">
+      <img src="./img/logo.png" class="logo" alt="logo" />
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
 
     <ul id="nav-links">
       <li><a href="./index.html">Home</a></li>
@@ -23,6 +25,53 @@
       <li><a href="./team/team.html">Team</a></li>
     </ul>
   </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-item">
+        <img src="./img/logo.png" class="footer-img" alt="logo" />
+        <p>
+          We build innovative software solutions that empower businesses to
+          grow, adapt, and succeed in a digital world. For inquiries, support,
+          or partnership opportunities.
+        </p>
+      </div>
+      <div class="footer-item">
+        <h3>Links</h3>
+        <ul>
+          <li><a class="footer-links" href="../index.html">Home</a></li>
+          <li>
+            <a class="footer-links" href="../about/about.html">About</a>
+          </li>
+          <li>
+            <a class="footer-links" href="../services/services.html">Services</a>
+          </li>
+          <li><a class="footer-links" href="">Contact</a></li>
+          <li><a class="footer-links" href="../team/team.html">Team</a></li>
+        </ul>
+      </div>
+      <div class="footer-item">
+        <h3>Socials</h3>
+        <ul>
+          <li>
+            <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          </li>
+          <li>
+            <a href="https://github.com/abdurahmanzerihun/WebPro.git"><i class="fab fa-github"></i> Github</a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; <span id="copyright-year"></span> NovaDev. All rights Reserved
+    </div>
+  </footer>
 
   <script src="./script/nav-bar.js"></script>
 </body>
