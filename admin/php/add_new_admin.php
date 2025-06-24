@@ -12,5 +12,5 @@ $stmt = $connection->prepare($sql);
 if ($stmt->execute([$email, $first_name, $last_name, $password])) {
   echo "Admin Account Created!";
 } else {
-  echo "Error: " . $stmt->error;
+  echo "Error: " . $stmt->errorInfo();
 }
