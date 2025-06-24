@@ -5,29 +5,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" href="../favicon.png" />
-  <title>NovaDev | Admin</title>
-  <link href="../style/nav-bar.css" rel="stylesheet" />
+  <title>NovaDev | Admin Login</title>
+  <link href="./css/login.css" rel="stylesheet" />
 </head>
 
 <body>
-  <div class="nav-bar">
-    <div class="nav-header">
-      <img src="../img/logo.png" class="logo" alt="logo" />
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    </div>
-
-    <ul id="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#message">Messages</a></li>
-    </ul>
+  <div class="loginbox">
+    <img src="./img/avatar.jpeg" class="logo" />
+    <h1>Login</h1>
+    <form method="post">
+      <p>Email</p>
+      <input type="text" id="email" name="email" placeholder="Enter Username" />
+      <p>Password</p>
+      <input type="password" id="password" name="password" placeholder="Enter Password" />
+      <input type="submit" name="" value="Login" onclick="submitForm(event)" />
+    </form>
   </div>
-
-  <div class="content">
-    <div id="home"></div>
-    <div id="messages"></div>
-  </div>
-
-  <style src="../script/nav-bar.js"></style>
+  <script src="./js/auth.js"></script>
 </body>
 
 </html>
