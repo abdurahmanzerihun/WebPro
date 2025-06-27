@@ -26,19 +26,15 @@ if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== tru
     </div>
 
     <ul id="nav-links">
-      <li><a href="#home">Home</a></li>
       <li><a href="#message">Messages</a></li>
       <li><a href="./php/logout.php">Logout</a></li>
     </ul>
   </div>
 
-  <div class="content">
-    <div id="home"></div>
-    <h1>Logged in as: <span id="user"></span></h1>
-    <div id="messages"></div>
-  </div>
+  <div id="messages"></div>
 
-  <style src="../script/nav-bar.js"></style>
+  <script src="../script/nav-bar.js"></script>
+  <script src="./js/data.js"></script>
 </body>
 
 </html>
