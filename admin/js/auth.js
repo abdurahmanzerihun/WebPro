@@ -24,7 +24,7 @@ submitForm = async (event) => {
     console.log("Response JSON:", data);
 
     if (data.success) {
-      window.location.href = "/admin/admin.html";
+      window.location.href = "/admin/admin.php";
     }
 
     if (!data.success) {

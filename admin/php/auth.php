@@ -1,4 +1,5 @@
 <?php
+session_start();
 header('Content-Type: application/json');
 require_once "../../php/connect.php";
 
@@ -26,6 +27,7 @@ try {
   $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
   if ($user && password_verify($password, $user['password'])) {
+    $_SESSION['admin_logged_in'] = true;
     echo json_encode([
       'success' => true,
     ]);
@@ -33,7 +35,6 @@ try {
     http_response_code(401);
     echo json_encode([
       'success' => false,
-      'message' => 'Incorrect email or password!'
     ]);
   }
 } catch (PDOException $e) {

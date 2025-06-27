@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
+  header("Location: /admin/index.html");
+  exit;
+}
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -19,6 +28,7 @@
     <ul id="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#message">Messages</a></li>
+      <li><a href="./php/logout.php">Logout</a></li>
     </ul>
   </div>
 
