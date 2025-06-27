@@ -19,18 +19,21 @@ submitForm = async (event) => {
       credentials: "include",
     });
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-
     const data = await response.json();
 
-    if (data.success === true) {
+    console.log("Response JSON:", data);
+
+    if (data.success) {
       window.location.href = "/admin/admin.html";
     }
 
-    if (data.success === false) {
+    if (!data.success) {
       console.log(`${data.message}`);
+      document.getElementById("error").style.display = "block";
+    }
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
     }
   } catch (error) {
     console.error("Fetch error:", error);

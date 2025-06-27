@@ -15,8 +15,8 @@ if (!isset($data['email'], $data['password'])) {
   exit;
 }
 
-$email = htmlspecialchars($data['email']);
-$password = htmlspecialchars($data['password']);
+$email = $data['email'];
+$password = $data['password'];
 
 try {
   $stmt = $connection->prepare("SELECT * FROM admin WHERE email = :email");
