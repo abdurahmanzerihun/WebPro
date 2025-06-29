@@ -82,17 +82,20 @@ p {
 }
 
 .contact-us {
-  border: 1px solid var(--primary-highlight);
+  border: none;
   margin-top: 50px;
   display: flex;
   align-items: flex-start;
   max-width: 1000px;
-  gap: 30px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 8px 20px rgba(0, 181, 237, 0.2);
+  gap: 40px;
+  margin: 60px auto;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0, 181, 237, 0.15);
   overflow: hidden;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
 }
 
 .contact-us-ani,
@@ -215,18 +218,21 @@ p {
 }
 
 .submit-btn {
-  padding: 10px 12px;
-  background-color: var(--primary-color);
-  color: #fff;
-  border: none;
-  border-radius: 5px;
+  padding: 12px 20px;
+  background-color: var(--primary-highlight);
+  color: white;
   font-size: 16px;
-  transition: background-color 0.3s ease;
+  font-weight: bold;
+  border-radius: 6px;
+  border: none;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .submit-btn:hover {
-  cursor: pointer;
-  background-color: var(--primary-highlight);
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
 }
 
 .map-show-links {
