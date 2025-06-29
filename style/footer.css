@@ -55,18 +55,16 @@ footer {
   transition: color 0.3s ease;
 }
 
-
 .footer-item ul li a:hover {
   color: var(--primary-highlight);
   cursor: pointer;
 }
 
-
 .copyright {
   color: white;
 }
 
-@media(max-width: 600px) {
+@media (max-width: 600px) {
   .footer-container {
     flex-direction: column;
     align-items: center;
