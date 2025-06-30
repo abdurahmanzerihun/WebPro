@@ -355,18 +355,140 @@ section {
   }
 }
 
-/* Responsive Tweaks */
-@media (max-width: 768px) {
-  .main h1 {
-    font-size: 2.5rem;
+@media (max-width: 600px) {
+
+  /* Main Section Adjustments */
+  .main {
+    padding: 60px 20px;
+    height: auto;
+    min-height: 100vh;
   }
 
-  .main p,
-  .cta p {
+  .main h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .main p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+
+  /* About Preview Adjustments */
+  .about-preview {
+    padding: 60px 20px;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .about-preview h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-preview p {
     font-size: 1rem;
+    margin: 15px 0 25px;
+  }
+
+  /* Services Preview Adjustments */
+  .services-preview {
+    padding: 60px 20px;
+    height: auto;
+  }
+
+  .services-preview h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .service-card {
+    padding: 25px 20px;
+  }
+
+  .service-card h3 {
+    font-size: 1.3rem;
+    margin-top: 15px;
+  }
+
+  /* CTA Section Adjustments */
+  .cta {
+    padding: 60px 20px;
   }
 
   .cta h2 {
     font-size: 1.8rem;
+  }
+
+  .cta p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+
+  .btn,
+  .btn-outline {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  /* Timeline Adjustments */
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item,
+  .timeline-item:nth-child(even) {
+    padding-left: 60px;
+    padding-right: 0;
+  }
+
+  .timeline-date {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    left: 0;
+  }
+
+  .timeline-content {
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* Stats Section Adjustments */
+  .stats-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .stat-item {
+    padding: 20px;
+  }
+
+  .stat-value {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 1rem;
+  }
+
+  /* Values Section Adjustments */
+  .values-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .value-card {
+    padding: 25px 20px;
+  }
+
+  .value-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
   }
 }
