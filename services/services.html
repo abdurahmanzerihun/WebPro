@@ -8,20 +8,23 @@
   <title>NovaDev|services</title>
   <link href="../style/nav-bar.css" rel="stylesheet" />
   <link href="../style/services.css" rel="stylesheet" />
+  <link href="../style/assets/css/all.min.css" rel="stylesheet" />
+  <link href="../style/footer.css" rel="stylesheet" />
 </head>
 
 <body>
   <div class="nav-bar">
-    <img src="../img/logo.png"  alt="logo"/>
-
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="nav-header">
+      <img src="../img/logo.png"  alt="logo"/>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
 
     <ul id="nav-links">
-      <li><a href="./index.html">Home</a></li>
-      <li><a href="./about/about.html">About</a></li>
-      <li><a href="./services/services.html">Services</a></li>
-      <li><a href="./contact/contact.html">Contact</a></li>
-      <li><a href="./team/team.html">Team</a></li>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about/about.html">About</a></li>
+      <li><a href="">Services</a></li>
+      <li><a href="../contact/contact.html">Contact</a></li>
+      <li><a href="../team/team.html">Team</a></li>
     </ul>
   </div>
   <h1 class="services-heading1">Our Services</h1>
@@ -54,9 +57,61 @@
 </div>
 <div class="motivation">
 <h2>Let's build the future together.</h2>
-<a href="./contact/contact.html">Contact Us</a>
+<a href="/contact/contact.html" class="btn">Contact Us</a>
 </div>
-  <script src="./script/nav-bar.js"></script>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-item">
+        <img src="../img/logo.png" class="footer-img" alt="logo" />
+        <p style="color: #fff">
+          We build innovative software solutions that empower businesses to
+          grow, adapt, and succeed in a digital world. For inquiries, support,
+          or partnership opportunities.
+        </p>
+      </div>
+      <div class="footer-item">
+        <h3>Links</h3>
+        <ul>
+          <li><a class="footer-links" href="../index.html">Home</a></li>
+          <li>
+            <a class="footer-links" href="../about/about.html">About</a>
+          </li>
+          <li>
+            <a class="footer-links" href="">Services</a>
+          </li>
+          <li>
+            <a class="footer-links" href="../contact/contact.html">Contact</a>
+          </li>
+          <li><a class="footer-links" href="../team/team.html">Team</a></li>
+        </ul>
+      </div>
+      <div class="footer-item">
+        <h3>Socials</h3>
+        <ul>
+          <li>
+            <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          </li>
+          <li>
+            <a href="https://github.com/abdurahmanzerihun/WebPro.git" target="_blank"><i class="fab fa-github"></i> Github</a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; <span id="copyright-year"></span> NovaDev. All rights Reserved
+    </div>
+  </footer>
+
+
+
+  <script src="../script/nav-bar.js"></script>
 </body>
 
 </html>
